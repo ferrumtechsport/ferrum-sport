@@ -2,12 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Ferrum Sport | Equipamiento Deportivo Profesional</title>
+  <title>Ferrum Sport</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,7 +15,10 @@
     <a href="#productos">Productos</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#contacto">Contacto</a>
-    <a href="#" onclick="toggleCarrito()">🛒 Carrito</a>
+
+    <a href="#" class="carrito-btn" onclick="toggleCarrito(); return false;">
+      🛒 Carrito <span id="carrito-badge">0</span>
+    </a>
   </nav>
 </header>
 
@@ -29,41 +30,72 @@
   </a>
 </section>
 
+<section class="cta">
+  <h2>¿Querés armar tu gimnasio o estudio?</h2>
+  <p>Te asesoramos según tu espacio y presupuesto. Pedí catálogo y opciones de envío.</p>
+  <a class="btn" href="https://wa.me/5493454330074" target="_blank">
+    Pedir asesoramiento
+  </a>
+</section>
+
+<section class="beneficios">
+  <div>🏋️ Calidad profesional</div>
+  <div>🚚 Envíos a todo el país</div>
+  <div>🛡️ Garantía y soporte</div>
+  <div>💬 Asesoramiento personalizado</div>
+</section>
+
 <section id="productos" class="productos">
   <h2>Nuestros Productos</h2>
 
   <div class="grid">
     <div class="card">
-  <img src="img/banco.jpg" alt="Banco Multifunción">
-  <h3>Banco Multifunción</h3>
+  <h3><a class="link-producto" href="producto.html?id=banco">Banco Multifunción</a></h3>
   <p>$350.000</p>
-  <button onclick="comprar('Banco Multifunción', 350000)">Comprar</button>
+  <button onclick="agregarAlCarrito('Banco Multifunción', 350000)">Comprar</button>
 </div>
 
 
     <div class="card">
-        <img src="img/cinta.jpg" alt="Cinta de correr">
-      <h3>Cinta de correr</h3>
-      <p>$1.200.000</p>
-      <button onclick="comprar('Cinta de correr', 1200000)">Comprar</button>
-    </div>
+  <h3><a class="link-producto" href="producto.html?id=cinta">Cinta de correr</a></h3>
+  <p>$1.200.000</p>
+  <button onclick="agregarAlCarrito('Cinta de correr', 1200000)">Comprar</button>
+</div>
+
 
     <div class="card">
-        <img src="img/reformer.jpg" alt="Reformer Pilates">
-      <h3>Reformer Pilates</h3>
-      <p>$980.000</p>
-      <button onclick="comprar('Reformer Pilates', 980000)">Comprar</button>
-    </div>
-  </div>
+  <h3><a class="link-producto" href="producto.html?id=reformer">Reformer Pilates</a></h3>
+  <p>$980.000</p>
+  <button onclick="agregarAlCarrito('Reformer Pilates', 980000)">Comprar</button>
+</div>
+
 </section>
 
 <section id="nosotros" class="nosotros">
-  <h2>Sobre Ferrum Sport</h2>
+  <h2>Nosotros</h2>
   <p>
-    En Ferrum Sport nos especializamos en equipamiento deportivo
-    de alto rendimiento para gimnasios, estudios de pilates y
-    entrenamiento en casa.
+    En Ferrum Sport fabricamos equipamiento deportivo profesional
+    para gimnasios y estudios de pilates.
   </p>
+</section>
+
+<section class="faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <details>
+    <summary>¿Hacen envíos a todo el país?</summary>
+    <p>Sí, realizamos envíos a todo el país.</p>
+  </details>
+
+  <details>
+    <summary>¿Los productos tienen garantía?</summary>
+    <p>Sí, todos nuestros productos cuentan con garantía.</p>
+  </details>
+
+  <details>
+    <summary>¿Cómo pido presupuesto?</summary>
+    <p>Podés escribirnos directamente por WhatsApp.</p>
+  </details>
 </section>
 
 <section id="contacto" class="contacto">
@@ -71,23 +103,43 @@
   <p>📲 WhatsApp | 📦 Envíos a todo el país</p>
 </section>
 
-<footer>
-  <p>© 2026 Ferrum Sport</p>
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <h3>Ferrum Sport</h3>
+      <p>Equipamiento profesional para gimnasios y estudios de pilates.</p>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <p>📱 WhatsApp: +54 9 11 0000 0000</p>
+      <p>📧 Email: ferrumsport@gmail.com</p>
+      <p>📸 Instagram: @ferrumsport</p>
+    </div>
+
+    <div>
+      <h4>Horarios</h4>
+      <p>Lunes a Viernes: 9:00 a 18:00</p>
+      <p>Sábados: 9:00 a 13:00</p>
+      <p>🚚 Envíos a todo el país</p>
+    </div>
+
+  </div>
+
+  <div class="footer-copy">
+    © 2026 Ferrum Sport — Todos los derechos reservados
+  </div>
 </footer>
 
-<script src="script.js"></script>
 
-<a href="https://wa.me/5493454330074" class="whatsapp" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-       alt="WhatsApp" width="32">
-</a>
-
-<div id="carrito" class="carrito">
+<div class="carrito" id="carrito">
+  <h3>Carrito</h3>
   <ul id="lista-carrito"></ul>
   <p id="total">Total: $0</p>
+  <button onclick="finalizarCompra()">Finalizar compra</button>
 </div>
 
-  <button onclick="enviarWhatsApp()">Finalizar compra</button>
-</div>
+<script src="script.js"></script>
 </body>
 </html>
