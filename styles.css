@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+p, a, li {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.header h1 {
+  font-size: 28px;
+}
+
+.hero h2 {
+  font-size: 36px;
+}
+
+.productos h2,
+.nosotros h2,
+.contacto h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 18px;
+}
+
+body {
+  background: #f4f9fc;
+  color: #0a2540;
+}
+
+.header {
+  background: #0a2540;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header span {
+  color: #4fc3f7;
+}
+
+.header a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0a2540, #4fc3f7);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #4fc3f7;
+  color: #0a2540;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.productos {
+  padding: 60px 20px;
+}
+
+.productos h2 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  background: #0a2540;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nosotros, .contacto {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+footer {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  font-size: 18px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.carrito {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  padding: 20px;
+  display: none;
+  z-index: 999;
+}
+
+.carrito h2 {
+  margin-bottom: 10px;
+}
+
+.carrito ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.carrito button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #0a2540;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.carrito li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carrito li button {
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.carrito li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.btn-eliminar {
+  background: transparent;
+  border: none;
+  color: #c00;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  color: #ff0000;
+}
